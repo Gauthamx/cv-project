@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusVision | Know Before You Go</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span class="icon">👁️</span> CampusVision
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="architecture.html">Architecture</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="dashboard.html" class="btn btn-primary">Live Availability</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Smarter Campus, <br>Less Wasted Time.</h1>
+            <p class="tagline">Know Before You Go.</p>
+            <p class="description">AI-powered facility availability system. Check real-time library seats and parking spaces before you leave your dorm.</p>
+            <div class="hero-buttons">
+                <a href="dashboard.html" class="btn btn-primary btn-large">View Live Dashboard</a>
+                <a href="#how-it-works" class="btn btn-secondary btn-large">How It Works</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="glass-card hero-card floating-animation">
+                <div class="card-header">
+                    <h3>Library Status</h3>
+                    <span class="pulse-indicator">Live</span>
+                </div>
+                <div class="card-body">
+                    <div class="stat">
+                        <span class="stat-value text-success" id="hero-lib-avail">--</span>
+                        <span class="stat-label">Available</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value text-danger" id="hero-lib-occ">--</span>
+                        <span class="stat-label">Occupied</span>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="hero-lib-bar" style="width: 0%;"></div>
+                </div>
+            </div>
+
+            <div class="glass-card hero-card floating-animation-delay">
+                <div class="card-header">
+                    <h3>Parking Status</h3>
+                    <span class="pulse-indicator">Live</span>
+                </div>
+                <div class="card-body">
+                    <div class="stat">
+                        <span class="stat-value text-success" id="hero-park-avail">--</span>
+                        <span class="stat-label">Available</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value text-danger" id="hero-park-occ">--</span>
+                        <span class="stat-label">Occupied</span>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="hero-park-bar" style="width: 0%;"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="features" id="features">
+        <h2 class="section-title">Why CampusVision?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>Save Time</h3>
+                <p>Stop circling the parking lot or wandering library floors. Get instant availability right on your phone.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>AI Powered</h3>
+                <p>Advanced Computer Vision & YOLO object detection guarantees high accuracy in real-time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile First</h3>
+                <p>Designed to be checked on the go. Scan the QR code below to access instantly on mobile.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <div class="workflow-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>Camera Input</h4>
+                <p>Secure fixed cameras monitor facilities.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>YOLO Detection</h4>
+                <p>AI identifies occupied & vacant spots.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>Data Processing</h4>
+                <p>Cloud syncs status in near real-time.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h4>Live Updates</h4>
+                <p>You see accurate availability anywhere.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="qr-section">
+        <div class="qr-content">
+            <h2>Take It With You</h2>
+            <p>Scan this QR code to open the live dashboard on your mobile device.</p>
+            <a href="dashboard.html" class="btn btn-primary">Open Dashboard</a>
+        </div>
+        <div class="qr-code-container glass-card" id="qrcode">
+            <!-- QR code generated by JS -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="brand">
+                <span class="icon">👁️</span> CampusVision
+            </div>
+            <p>&copy; 2026 CampusVision. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="architecture.html">Architecture</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

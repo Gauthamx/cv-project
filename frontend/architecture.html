@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Architecture | CampusVision</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span class="icon">👁️</span> CampusVision
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="architecture.html" class="active">Architecture</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="dashboard-header">
+        <div>
+            <h1>System Architecture</h1>
+            <p class="text-secondary">How CampusVision works under the hood</p>
+        </div>
+    </div>
+
+    <section class="architecture-content">
+        <div class="arch-block">
+            <h3>📷 1. Camera Module</h3>
+            <p>Captures real-time video feeds from strategic points in the library and parking areas.</p>
+        </div>
+        <div class="arch-block">
+            <h3>⚙️ 2. Image Processing Module</h3>
+            <p>Uses OpenCV (Python) to preprocess captured frames, apply filters, and resize images for optimal AI inference.</p>
+        </div>
+        <div class="arch-block">
+            <h3>🧠 3. Object Detection Module</h3>
+            <p>A trained YOLO (You Only Look Once) model analyzes the processed frames to detect whether predefined ROI (Regions of Interest) representing seats or parking spaces are vacant or occupied.</p>
+        </div>
+        <div class="arch-block">
+            <h3>📊 4. Occupancy Analysis Module</h3>
+            <p>Calculates the overall occupancy percentage and formats the data for the backend API.</p>
+        </div>
+        <div class="arch-block">
+            <h3>🗄️ 5. Database Module</h3>
+            <p>Stores real-time status and historical occupancy records securely in MongoDB. Powered by Mongoose.</p>
+        </div>
+        <div class="arch-block">
+            <h3>🌐 6. Backend API Module</h3>
+            <p>A fast Node.js and Express server that processes requests, validates data updates from the vision system, and serves live occupancy data via RESTful API endpoints.</p>
+        </div>
+        <div class="arch-block">
+            <h3>📱 7. CampusVision Web App</h3>
+            <p>The frontend application built with HTML5, CSS3, and JavaScript. It provides an intuitive dashboard for students and staff to view real-time resource availability.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="brand">
+                <span class="icon">👁️</span> CampusVision
+            </div>
+            <p>&copy; 2026 CampusVision.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('nav-active');
+        });
+    </script>
+</body>
+</html>

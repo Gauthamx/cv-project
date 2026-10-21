@@ -1,0 +1,136 @@
+@media screen and (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .description {
+        margin: 0 auto 2.5rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-image {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .hero-card {
+        margin: 0 auto;
+    }
+    
+    .hero-card:nth-child(1), .hero-card:nth-child(2) {
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links, .nav-actions {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Mobile Menu Active State */
+    .nav-active {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-primary);
+        padding: 2rem 5%;
+        border-bottom: 1px solid var(--glass-border);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    
+    .nav-links.nav-active {
+        gap: 1.5rem;
+        align-items: center;
+    }
+    
+    .nav-actions.nav-active {
+        top: calc(100% + 200px); /* Adjust based on menu size */
+        padding-top: 0;
+        border-top: none;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .qr-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .qr-content {
+        margin-bottom: 2rem;
+    }
+    
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .facility-section h2 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links {
+        margin-top: 1rem;
+    }
+    
+    .footer-links a {
+        margin: 0 0.75rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .stat-value {
+        font-size: 2rem;
+    }
+    
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    
+    .grid-item {
+        padding: 0.75rem 0.25rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
